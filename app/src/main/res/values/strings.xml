@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Biodata</string>
+    <string-array name="nama_prodi">
+        <item>Teknik Informatika</item>
+        <item>Sistem Informatika</item>
+    </string-array>
+
+
+</resources>

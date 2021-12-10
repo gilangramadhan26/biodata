@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:focusable="true">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/upp"
+        android:src="@drawable/upp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FORM INPUT BIODATA SISWA "
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/upp"
+        android:id="@+id/nama"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama Lengkap"
+        android:ems="15"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:layout_below="@+id/nama"
+        android:layout_margin="15dp"
+        android:id="@+id/namaKamu"
+        android:nextFocusDown="@id/nim"/>
+
+    <EditText
+        android:id="@+id/nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/namaKamu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:ems="15"
+        android:hint="Masukkan Nim"
+        android:inputType="text"
+        android:nextFocusDown="@id/tgl"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Tanggal Lahir"
+        android:ems="15"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:layout_below="@+id/nim"
+        android:layout_margin="15dp"
+        android:id="@+id/tgl"
+        android:nextFocusDown="@id/radio"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="jenis kelamin"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tgl"
+        android:layout_marginTop="10dp"
+        android:id="@+id/jk"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radio"
+        android:layout_below="@id/jk"
+        android:nextFocusDown="@id/programs">
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laki-laki"
+        android:id="@+id/laki"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perempuan"
+        android:id="@+id/perempuan"
+        android:layout_marginLeft="30dp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program Studi"
+        android:textSize="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radio"
+        android:layout_marginTop="15dp"
+        android:id="@+id/program"/>
+
+    <Spinner
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/program"
+        android:layout_marginTop="10dp"
+        android:id="@+id/programs"
+        android:entries="@array/nama_prodi"
+        android:textAlignment="center" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kirim Data"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/programs"
+        android:layout_marginTop="15dp"
+        android:onClick="kirimdata"/>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
